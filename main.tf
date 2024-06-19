@@ -84,11 +84,4 @@ resource "azurerm_linux_virtual_machine" "myterraformvm" {
   admin_username                  = "azureuser"
   admin_password                  = "Windows@123456"
   disable_password_authentication = false
-
-  connection {
-    host     = self.public_ip_address
-    user     = "azureuser"
-    password = "Windows@123456"
-    type     = "ssh"
-  }
 }
